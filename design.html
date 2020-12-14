@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Practice</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		#test1{
+			background: red;
+			color: black;
+			height: 100px;
+			float: left;
+			margin-right: 50px;
+			padding: 20px;
+		}
+		#test2{
+			background: yellow;
+			color: black;
+			height: 100px;
+			float: left;
+			padding: 20px;
+		}
+		.blue{
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="test1">
+		<h2 class="blue">Test Box 1</h2>
+		<p>This is my first class of jquery. Please pray for me to learn more from jquery</p>
+	</div>
+	<div id="test2">
+		<h2>Test Box 2</h2>
+		<p>This is my first class of jquery. Please pray for me to learn more from jquery</p>
+	</div>
+	<div id="test3" style="clear: both;">
+		<form action="" id="sform">
+			<label for="">Name</label> <input type="text" name="sname" id="sname">			
+			<label for="">Class</label> <input type="text" name="sclass" id="sclass">
+			<label for="">Country</label>
+			<select id="scountry">
+				<option value="India">India</option>
+				<option value="Pakistan">Pakistan</option>
+				<option value="Bangladesh">Bangladesh</option>
+				<option value="Sri Lanka">Sri Lanka</option>
+				<option value="Nepal">Nepal</option>
+			</select>	
+			<input type="submit" name="" value="Submit">	
+		</form>
+	</div>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#sname').focus(function(){
+			$(this).css("background","lime");
+		});
+		$('#test1').click(function(){
+			$('#test1 h2').clone().prependTo("#test2");
+		});
+	});
+</script>
+</body>
+</html>
